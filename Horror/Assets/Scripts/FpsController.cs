@@ -16,6 +16,7 @@ public class FpsController : MonoBehaviour
 
   Vector3 velocity;
   bool isGrounded;
+    float z =1f;
 
 #endregion
   
@@ -33,17 +34,20 @@ public class FpsController : MonoBehaviour
           velocity.y = -2f;
       }
 
-      float x = Input.GetAxis("Horizontal");
-      float z = Input.GetAxis("Vertical");
+     // float x = Input.GetAxis("Horizontal");
+       if(Input.GetKey(KeyCode.W)) {
+            Vector3 move = transform.forward * z;
+            characterController.Move(move * speed * Time.deltaTime);
+        }
 
-      Vector3 move = transform.right * x + transform.forward * z;
+     
 
-     characterController.Move(move * speed * Time.deltaTime);
+     
 
-     if(Input.GetButtonDown("Jump") && isGrounded)
-     {
-         velocity.y = Mathf.Sqrt(jumpHeight);
-     }  
+     //if(Input.GetButtonDown("Jump") && isGrounded)
+    // {
+      //   velocity.y = Mathf.Sqrt(jumpHeight);
+    // }  
      
      velocity.y += gravity * Time.deltaTime;
      characterController.Move(velocity * Time.deltaTime);
