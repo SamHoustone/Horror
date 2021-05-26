@@ -22,9 +22,9 @@ public class StressReceiver : MonoBehaviour
             var previousPosition = _lastPosition;
             /* In order to avoid affecting the transform current position and rotation each frame we substract the previous translation and rotation */
             _lastPosition = new Vector3(
-                MaximumTranslationShake.x * (Mathf.PerlinNoise(0, Time.time * 25) * 10 - 1),
-                MaximumTranslationShake.y * (Mathf.PerlinNoise(1, Time.time * 25) * 10 - 1),
-                MaximumTranslationShake.z * (Mathf.PerlinNoise(2, Time.time * 25) * 10 - 1)
+                MaximumTranslationShake.x * (Mathf.PerlinNoise(0, Time.time * 25) * 2 - 1),
+                MaximumTranslationShake.y * (Mathf.PerlinNoise(1, Time.time * 25) * 2 - 1),
+                MaximumTranslationShake.z * (Mathf.PerlinNoise(2, Time.time * 25) * 2 - 1)
             ) * shake;
 
             _lastRotation = new Vector3(
