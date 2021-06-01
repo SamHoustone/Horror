@@ -1,11 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FpsController : MonoBehaviour
 {
-  public CharacterController characterController;
-#region PlayerMovementVars
+    public CharacterController characterController;
+ #region PlayerMovementVars
     public float speed = 12f;
   public float gravity = -9.19f;
   public float jumpHeight;
@@ -27,30 +27,14 @@ public class FpsController : MonoBehaviour
   {
       #region PlayerMovement
 
-       isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance,groundMask);
+       float x = Input.GetAxis("Horizontal");
+       float z = Input.GetAxis("Vertical");
 
-      if(isGrounded && velocity.y < 0)
-      {
-          velocity.y = -2f;
-      }
+       Vector3 move = transform.right * x + transform.forward *z;
 
-     // float x = Input.GetAxis("Horizontal");
-       if(Input.GetKey(KeyCode.W)) {
-            Vector3 move = transform.forward * z;
-            characterController.Move(move * speed * Time.deltaTime);
-        }
+       characterController.Move(move * speed * Time.deltaTime);
 
-     
-
-     
-
-     //if(Input.GetButtonDown("Jump") && isGrounded)
-    // {
-      //   velocity.y = Mathf.Sqrt(jumpHeight);
-    // }  
-     
-     velocity.y += gravity * Time.deltaTime;
-     characterController.Move(velocity * Time.deltaTime);
+      characterController.Move(velocity * Time.deltaTime);
       #endregion
       
   }

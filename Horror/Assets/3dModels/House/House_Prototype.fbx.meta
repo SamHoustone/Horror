@@ -5,6 +5,96 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Curtain
+    second: {fileID: 2100000, guid: 293a67737de9d98489d06b318085a251, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CurtainAnchor
+    second: {fileID: 2100000, guid: cf0367ce87a2c2a48ba985790a85decc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CurtainHook
+    second: {fileID: 2100000, guid: 6cc56126b8c560149b1d90ad512f1bfe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DecoratedEntrance
+    second: {fileID: 2100000, guid: c38311909ff1998429ba0013d6239fdb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DjinnSymbol
+    second: {fileID: 2100000, guid: d07ec1d66cd15504b93a51b57cdbd463, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door
+    second: {fileID: 2100000, guid: 97ad94822dd261242b07fc5d4173942e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorHandle
+    second: {fileID: 2100000, guid: 418324feb5a510d40be8c903b065dda8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorHandle.001
+    second: {fileID: 2100000, guid: f8f2267a419850b42858a8efa8ab98e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KeyHole
+    second: {fileID: 2100000, guid: e429e8be400af1a4f90acf0fc351b603, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LowerWoodenWall
+    second: {fileID: 2100000, guid: 5b2ddbc9a0a3ed34f843b10304d517b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 70bfe7b54f7fce3469bedf7c8fe1e0de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 078265a0e644c3d40bb3b778b0819536, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SmallWindowDoor
+    second: {fileID: 2100000, guid: 2f95bee12a1dc3644b601119d417c82a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowDoors
+    second: {fileID: 2100000, guid: 91ccb0f09b391804abf3a740a6efafde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowLatch
+    second: {fileID: 2100000, guid: 4163bda0025ede94ebbff9a62d5dc6dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowsGlass
+    second: {fileID: 2100000, guid: e6858b9bd43701c4282cb56b9029d56f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodenFloor
+    second: {fileID: 2100000, guid: 61291dc552815f244b935552436e00f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodenWall
+    second: {fileID: 2100000, guid: de898aab11701034788ec05a03b5355f, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Fabric045_1K_Normal
