@@ -4,10 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - People
-  - Car
-  - Bcycle
-  - PeopleSemaphore
+  - Key
+  - InteractiveObject
+  - DoorButton
   layers:
   - Default
   - TransparentFX
@@ -17,11 +16,11 @@ TagManager:
   - UI
   - 
   - 
-  - people
-  - car
-  - semaphore
-  - player
-  - CC
+  - PostProcessing
+  - Interact
+  - 
+  - 
+  - 
   - 
   - 
   - 
