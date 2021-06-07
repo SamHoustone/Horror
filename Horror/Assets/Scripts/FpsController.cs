@@ -8,15 +8,11 @@ public class FpsController : MonoBehaviour
  #region PlayerMovementVars
     public float speed = 12f;
   public float gravity = -9.19f;
-  public float jumpHeight;
-
-  public Transform groundCheck;
-  public float groundDistance;
-  public LayerMask groundMask;
+  public Camera PlayerCamera;
+  public int range;
 
   Vector3 velocity;
   bool isGrounded;
-    float z =1f;
 
 #endregion
   
@@ -25,17 +21,13 @@ public class FpsController : MonoBehaviour
   }
   private void Update() 
   {
-      #region PlayerMovement
-
        float x = Input.GetAxis("Horizontal");
        float z = Input.GetAxis("Vertical");
 
-       Vector3 move = transform.right * x + transform.forward *z;
+       Vector3 move = transform.right * x + transform.forward * z;
 
        characterController.Move(move * speed * Time.deltaTime);
 
       characterController.Move(velocity * Time.deltaTime);
-      #endregion
-      
   }
 }

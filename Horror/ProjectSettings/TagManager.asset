@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Key
   - InteractiveObject
-  - DoorButton
+  - Door
+  - Fuse
   layers:
   - Default
   - TransparentFX

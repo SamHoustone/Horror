@@ -1,24 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+ using System.Collections;
 
-public class MouseLookFPS : MonoBehaviour
-{
-    public float sensitivity = 100f;
-    public Transform obj;
-
-    float XRotation = 0f;
-    // Update is called once per frame
-    void Update()
-    {
-        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
-
-
-        XRotation -= mouseY;
-        XRotation = Mathf.Clamp(XRotation, -90f, 90f);
-
-        transform.localRotation = Quaternion.Euler(XRotation, 0f, 0f);
-        obj.Rotate(Vector3.up * mouseX);
-    }
-}
+ public class MouseLookFPS : MonoBehaviour {
+     public float horizontalSpeed = 2.0F;
+     public float verticalSpeed = 2.0F;
+     void Update() 
+     {
+         float h = horizontalSpeed * Input.GetAxis("Mouse X");
+         float v = verticalSpeed * Input.GetAxis("Mouse Y");
+         
+         v = Mathf.Clamp(v,- 90f,90f);
+         transform.Rotate(v, h, 0);
+     }
+ }
