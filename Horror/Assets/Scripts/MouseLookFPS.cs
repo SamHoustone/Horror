@@ -1,15 +1,26 @@
-﻿using UnityEngine;
- using System.Collections;
+﻿using System;
+    using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
- public class MouseLookFPS : MonoBehaviour {
-     public float horizontalSpeed = 2.0F;
-     public float verticalSpeed = 2.0F;
-     void Update() 
-     {
-         float h = horizontalSpeed * Input.GetAxis("Mouse X");
-         float v = verticalSpeed * Input.GetAxis("Mouse Y");
-         
-         v = Mathf.Clamp(v,- 90f,90f);
-         transform.Rotate(v, h, 0);
-     }
- }
+public class MouseLookFPS : MonoBehaviour
+{
+public float mouseSensitivity;
+public Transform playerBody;
+float xRotation;
+private void Start()
+{
+    Cursor.lockState = CursorLockMode.Locked;
+}
+    void Update()
+    {
+       float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+       float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+       xRotation -= mouseY;
+       xRotation = Mathf.Clamp(xRotation, -90f,90f);
+
+       transform.localRotation = Quaternion.Euler(xRotation,0f,0f);
+       playerBody.Rotate(Vector3.up * mouseX);
+    }
+}
