@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,9 +8,6 @@ public class FpsController : MonoBehaviour
  #region PlayerMovementVars
     public float speed = 12f;
   public float gravity = -9.19f;
-  public Camera PlayerCamera;
-  public int range;
-
   Vector3 velocity;
   bool isGrounded;
 
