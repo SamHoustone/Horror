@@ -19,6 +19,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 timeline.SetActive(true);
                 Destroy(gameObject);
+                
                 fps.m_WalkSpeed = 1f;
                 fps.m_RunSpeed = 1f;
             }

@@ -12,6 +12,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public FirstPersonController fps;
         public GameObject pp;
+        public GameObject timeline;
+        //public Animator
 
 
         private void OnTriggerEnter(Collider other)
@@ -22,6 +24,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 fps.m_RunSpeed = 3;
                 Destroy(pp);
                 Destroy(gameObject);
+                Destroy(timeline);
             }
         }
     }

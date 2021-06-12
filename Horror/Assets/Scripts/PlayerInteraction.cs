@@ -13,7 +13,8 @@ public class PlayerInteraction : MonoBehaviour
   public TextMeshProUGUI DialougeText;
   public Image img1;
   public Image img2;
-   bool PickedFuse;
+  
+    bool PickedFuse;
    public bool key1,key2,key3;
     public GameObject Fuse1;
     public GameObject Fuse2;
@@ -33,25 +34,26 @@ public class PlayerInteraction : MonoBehaviour
         if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out hit, range))
         {
             if (hit.transform.name == "Torch")
-            {               
+            {
                 img1.enabled = true;
             }
             else
             {
-                
+
                 img1.enabled = false;
             }
 
             if (hit.transform.name == "Fuse")
             {
-                
+
                 img2.enabled = true;
             }
             else
             {
-                
+
                 img2.enabled = false;
             }
+           
         }
 
         
@@ -63,7 +65,7 @@ public class PlayerInteraction : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(PlayerCamera.transform.position,PlayerCamera.transform.forward,out hit, range))
         {
-            Debug.Log();
+           // Debug.Log();
             if(hit.transform.name == "Key1")
             {
                 key1 = true;
