@@ -63,6 +63,7 @@ public class PlayerInteraction : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(PlayerCamera.transform.position,PlayerCamera.transform.forward,out hit, range))
         {
+            Debug.Log();
             if(hit.transform.name == "Key1")
             {
                 key1 = true;
