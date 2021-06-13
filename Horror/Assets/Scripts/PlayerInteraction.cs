@@ -21,6 +21,7 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject Fuse3;
     public GameObject FFLights;
     public GameObject GFLights;
+    public AudioSource rdo;
 
     public Animator animator;
     private void Start()
@@ -165,6 +166,7 @@ public class PlayerInteraction : MonoBehaviour
                     Fuse1.SetActive(true);
                     FFLights.SetActive(true);
                     PickedFuse = false;
+                    rdo.Play();
                     animator.Play("DoorCloseJumpScare");
       }
       else if(hit.transform.name == "FuseH2" && PickedFuse == true)
@@ -172,6 +174,7 @@ public class PlayerInteraction : MonoBehaviour
                     Fuse.SetActive(false);
                     Fuse2.SetActive(true);
                     GFLights.SetActive(true);
+                    rdo.Play();
                     PickedFuse = false;
                     animator.Play("DoorCloseJumpScare");
 
