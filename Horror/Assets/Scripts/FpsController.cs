@@ -12,10 +12,6 @@ public class FpsController : MonoBehaviour
   bool isGrounded;
 
 #endregion
-  
-  private void Start() {
-      Cursor.lockState = CursorLockMode.Locked;
-  }
   private void Update() 
   {
        float x = Input.GetAxis("Horizontal");

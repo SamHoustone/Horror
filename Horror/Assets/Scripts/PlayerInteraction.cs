@@ -13,6 +13,7 @@ public class PlayerInteraction : MonoBehaviour
   public TextMeshProUGUI DialougeText;
   public Image img1;
   public Image img2;
+  public KeyPad keyPad;
   
     bool PickedFuse;
    public bool key1,key2,key3;
@@ -26,6 +27,8 @@ public class PlayerInteraction : MonoBehaviour
     public Animator animator;
     private void Start()
     {
+     Cursor.lockState = CursorLockMode.Locked;
+        keyPad = FindObjectOfType<KeyPad>();
         DialougeText.text ="";
     }
 
@@ -55,8 +58,15 @@ public class PlayerInteraction : MonoBehaviour
             {
 
                 img2.enabled = false;
+            } 
+        }
+         if(Input.GetMouseButtonDown(0) && keyPad.isOpen == false)
+        {
+             if(hit.transform.name == "MainDoor")
+            {
+               keyPad.CalculatorAnimation();    
+               Cursor.lockState = CursorLockMode.None;
             }
-           
         }
 
         

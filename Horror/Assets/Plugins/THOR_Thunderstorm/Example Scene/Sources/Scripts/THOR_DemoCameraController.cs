@@ -145,18 +145,6 @@ namespace THOR
 
         void Update()
         {
-            if (Input.GetMouseButton(1))
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-                CameraControl();
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-            }
-
             // Slow Motion
             if (Input.GetKeyDown(KeyCode.Space))
             {

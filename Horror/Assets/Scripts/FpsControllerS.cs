@@ -19,11 +19,7 @@ public class FpsControllerS : MonoBehaviour
     float z =1f;
 
 #endregion
-  
-  private void Start() {
-      Cursor.lockState = CursorLockMode.Locked;
-  }
-  private void Update() 
+   private void Update() 
   {
       #region PlayerMovement
 
