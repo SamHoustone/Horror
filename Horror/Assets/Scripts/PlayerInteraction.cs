@@ -25,9 +25,12 @@ public class PlayerInteraction : MonoBehaviour
     public AudioSource rdo;
 
     public Animator animator;
+    public void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     private void Start()
     {
-     Cursor.lockState = CursorLockMode.Locked;
         keyPad = FindObjectOfType<KeyPad>();
         DialougeText.text ="";
     }
@@ -160,6 +163,7 @@ public class PlayerInteraction : MonoBehaviour
                     Fuse.SetActive(true);
                     PickedFuse = true;
                     GFLights.SetActive(false);
+                    rdo.Stop();
                 }
                 else if (hit.transform.name == "Fuse3")
                 {
@@ -176,7 +180,7 @@ public class PlayerInteraction : MonoBehaviour
                     Fuse1.SetActive(true);
                     FFLights.SetActive(true);
                     PickedFuse = false;
-                    rdo.Play();
+                    rdo.Stop();
                     animator.Play("DoorCloseJumpScare");
       }
       else if(hit.transform.name == "FuseH2" && PickedFuse == true)

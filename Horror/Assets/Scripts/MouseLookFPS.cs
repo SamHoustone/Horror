@@ -8,7 +8,9 @@ public class MouseLookFPS : MonoBehaviour
 public float mouseSensitivity;
 public Transform playerBody;
 float xRotation;
-private void Start()
+float yRotation;
+
+    private void Start()
 {
     Cursor.lockState = CursorLockMode.Locked;
 }
@@ -17,10 +19,12 @@ private void Start()
        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-       xRotation -= mouseY;
-       xRotation = Mathf.Clamp(xRotation, -90f,90f);
+       yRotation += mouseX;
+       xRotation += mouseY;
+        yRotation = Mathf.Clamp(yRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, -90f,90f);
 
-       transform.localRotation = Quaternion.Euler(xRotation,0f,0f);
+        transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
        playerBody.Rotate(Vector3.up * mouseX);
     }
 }
